@@ -9,10 +9,12 @@
 
             foreach ($words as $index => $word) {
                 $word = strtolower($word);
+                $word = preg_replace('/[^a-z]/' , '' , $word);
                 if ($word == $word_to_count) {
                     $count++;
                 }
             }
+            
             return $count;
         }
     }
