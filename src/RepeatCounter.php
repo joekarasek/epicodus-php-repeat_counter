@@ -4,8 +4,11 @@
         function CountRepeat($phrase, $word_to_count)
         {
             $count = 0;
-            $phrase = explode(' ', $phrase);
-            foreach ($phrase as $index => $word) {
+            $words = explode(' ', $phrase);
+            $word_to_count = strtolower($word_to_count);
+
+            foreach ($words as $index => $word) {
+                $word = strtolower($word);
                 if ($word == $word_to_count) {
                     $count++;
                 }
